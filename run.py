@@ -9,11 +9,12 @@ config = context.config           # from the gear context, get the config settin
 
 ## Load in values from the gear configuration.
 my_name = config['my_name']
+crust = config['crust_style']
 toppings = config['pizza_toppings']
 
 
 print("Hello, {}! Here's your pizza order:\n".format(my_name))
-pizza_desc = "One large thin crust with "
+pizza_desc = "One large {} with ".format(crust)
 for i in range(len(toppings)):
     pizza_desc = pizza_desc + toppings[i]
     if i == len(toppings)-2:

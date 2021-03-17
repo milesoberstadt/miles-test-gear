@@ -2,7 +2,7 @@
     "name": "miles-test-gear",
     "label": "Miles Test Gear",
     "description": "There's no way I'm going to remember to update this, so this is the placeholder",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "author": "Miles",
     "maintainer": "Flywheel <support@flywheel.io>",
     "cite": "",
@@ -15,7 +15,7 @@
     "custom": {
         "gear-builder": {
             "category": "analysis",
-            "image": "overcoded/fw-test-app:0.1.2"
+            "image": "overcoded/fw-test-app:0.1.4"
         }
     },
     "inputs": {},
@@ -23,27 +23,26 @@
         "my_name": {
             "description": "Your name, for the pizza order",
             "type": "string",
-            "defalt": "Garfield"
+            "default": "Garfield"
+        },
+        "crust_style": {
+            "description": "Crust options",
+            "enum": [
+                "thin crust",
+                "thick crust",
+                "deep dish crust"
+            ],
+            "type": "string"
         },
         "pizza_toppings": {
             "description": "The toppings you want on your `za",
             "type": "array",
             "items": {
                 "type": "string",
-                "enum": [
-                    "Pepperoni",
-                    "Sausage",
-                    "Green Peppers",
-                    "Onions",
-                    "Mushrooms",
-                    "Extra Cheese",
-                    "Pineapple"
-                ]
+                "enum": ["Pepperoni", "Sausage", "Green Peppers", "Onions", "Mushrooms", "Extra Cheese", "Pineapple"]
             },
-            "default": [
-                "Pepperoni"
-            ]
+            "default": ["Pepperoni"]
         }
     },
-    "command": "python run.py"
+    "command": "python3 run.py"
 }
